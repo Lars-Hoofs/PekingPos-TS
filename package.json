@@ -1,0 +1,26 @@
+{
+  "name": "pekinggarden-pos",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dine-in ordering system for Peking Garden, in TypeScript with a layered architecture.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node --env-file-if-exists=.env dist/src/main.js",
+    "test": "tsc && node --test \"dist/test/unit/**/*.test.js\"",
+    "test:integration": "tsc && node --env-file-if-exists=.env --test \"dist/test/integration/**/*.test.js\""
+  },
+  "dependencies": {
+    "express": "5.3.0",
+    "mssql": "12.7.11"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.6",
+    "@types/mssql": "12.3.0",
+    "@types/node": "24.19.2",
+    "typescript": "5.9.3"
+  }
+}
